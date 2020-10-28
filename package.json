@@ -1,0 +1,41 @@
+{
+  "name": "react-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeffry921/Todo-App-React.git"
+  },
+  "keywords": [],
+  "author": "ANTONI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yeffry921/Todo-App-React/issues"
+  },
+  "homepage": "https://github.com/Yeffry921/Todo-App-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
