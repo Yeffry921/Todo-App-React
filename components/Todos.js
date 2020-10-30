@@ -1,46 +1,34 @@
 import React from 'react';
 
 import AddTodo from './AddTodo';
+import TodoItems from './TodoItems';
 
 class Todos extends React.Component {
 	constructor(props) {
-    super(props)
-
+    super(props);
+    
     this.state = {
-      todos: [
-        {
-          todo: 'Todo sample 1',
-          completed: false,
-          id: 1
-        },
-        {
-          todo: 'Todo sample 2',
-          completed: false,
-          id: 1
-        },
-        {
-          todo: 'Todo sample 3',
-          completed: false,
-          id: 1
-        },
-        {
-          todo: 'Todo sample 4',
-          completed: false,
-          id: 1
-        },
-        {
-          todo: 'Todo sample 5',
-          completed: false,
-          id: 1
-        },
-      ]
+      todos: []
     }
+    this.addTodos = this.addTodos.bind(this)
+	}
+
+  addTodos(todo) {
+    this.setState((prevState) => {
+      return {
+        todos: prevState.todos.concat(todo)
+      }
+    })
+    
   }
-  
-  render() {
-    return (
-      <AddTodo/>
-      
-    )
-  }
+	render() {
+		return (
+			<React.Fragment>
+				<AddTodo onAddTodos={this.addTodos}/>
+        <TodoItems todos={this.state.todos}/>
+			</React.Fragment>
+		);
+	}
 }
+
+export default Todos;
