@@ -1,4 +1,5 @@
 import React from 'react';
+import nextId from 'react-id-generator'
 
 class AddTodo extends React.Component {
 	constructor(props) {
@@ -6,7 +7,8 @@ class AddTodo extends React.Component {
 
 		this.state = {
       todo: '',
-      completed: false,
+			completed: false,
+			id: nextId(),
 		};
 
 		this.handleChange = this.handleChange.bind(this);
